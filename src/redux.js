@@ -22,7 +22,7 @@ export const store = createStore(
     window.devToolsExtension && window.devToolsExtension()
 );
 
-const reducer = (state, { type, payload }) => {
+function reducer (state, { type, payload }) {
     switch(type){
         case 'ADD_TODO':
             return {

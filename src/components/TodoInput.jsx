@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useDisptach } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addTodoAction } from '../redux';
 import { v4 as uuid } from 'uuid';
 
 
-export default TodoInput = () => {
+const TodoInput = () => {
     const [todo, setTodo] = useState('');
-    const dispatch = useDisptach();
+    const dispatch = useDispatch();
     const addTodo = todo => dispatch(addTodoAction(todo));
 
     const onChange = e => setTodo(e.target.value)
@@ -38,3 +38,5 @@ export default TodoInput = () => {
         </form>
     )
 }
+
+export default TodoInput;

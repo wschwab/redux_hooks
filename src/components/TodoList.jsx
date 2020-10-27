@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { toggleTodoAction, deleteTodoAction } from '../redux';
 
-export default TodoList = () => {
+const TodoList = () => {
     const todos = useSelector(state => state.todos);
     const dispatch = useDispatch();
     const toggleTodo = todoId => dispatch(toggleTodoAction(todoId));
@@ -25,3 +25,5 @@ export default TodoList = () => {
         </ul>
     )
 }
+
+export default TodoList;
